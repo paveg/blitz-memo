@@ -1,4 +1,4 @@
 # Prisma Migrate lockfile v1
 
-20201231202910-initial-migration
-20201231203619-init
+20201231221653-init-postgresql
+20201231225510

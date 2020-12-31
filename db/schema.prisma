@@ -36,3 +36,13 @@ model Session {
   publicData         String?
   privateData        String?
 }
+
+model Memo {
+  id        Int      @default(autoincrement()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String   
+  body      String   
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int      
+}
