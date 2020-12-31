@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react"
+import * as React from "react"
 
 type initialValues = {
   title: string
