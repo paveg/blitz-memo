@@ -1,6 +1,6 @@
 This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
 
-# \*\*blitz-memo
+# blitz-memo
 
 ## Getting Started
 
