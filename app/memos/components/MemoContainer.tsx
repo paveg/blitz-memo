@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useRouter } from "next/router"
 
 const MemoContainer: React.FC = ({ children }) => {
   return (
