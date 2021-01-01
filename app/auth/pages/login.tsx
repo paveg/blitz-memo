@@ -1,15 +1,17 @@
-import React from "react"
+import * as React from "react"
 import { useRouter, BlitzPage } from "blitz"
 import Layout from "app/layouts/Layout"
 import { LoginForm } from "app/auth/components/LoginForm"
+import LoginContainer from "../components/LoginContainer"
 
 const LoginPage: BlitzPage = () => {
   const router = useRouter()
 
   return (
-    <div>
+    <LoginContainer>
+      <h1 className="text-center text-4xl mt-8 mb-16">Memo Application</h1>
       <LoginForm onSuccess={() => router.push("/")} />
-    </div>
+    </LoginContainer>
   )
 }
 
