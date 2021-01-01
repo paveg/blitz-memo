@@ -4,6 +4,7 @@ import { Link, useRouter, useQuery, useMutation, useParam, BlitzPage } from "bli
 import getMemo from "app/memos/queries/getMemo"
 import updateMemo from "app/memos/mutations/updateMemo"
 import MemoForm from "app/memos/components/MemoForm"
+import MemoContainer from "../../../components/MemoContainer"
 
 export const EditMemo = () => {
   const router = useRouter()
@@ -47,7 +48,7 @@ export const EditMemo = () => {
 
 const EditMemoPage: BlitzPage = () => {
   return (
-    <div>
+    <MemoContainer>
       <Suspense fallback={<div>Loading...</div>}>
         <EditMemo />
       </Suspense>
@@ -57,7 +58,7 @@ const EditMemoPage: BlitzPage = () => {
           <a>Memos</a>
         </Link>
       </p>
-    </div>
+    </MemoContainer>
   )
 }
 

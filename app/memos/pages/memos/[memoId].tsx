@@ -3,6 +3,7 @@ import Layout from "app/layouts/Layout"
 import { Link, useRouter, useQuery, useParam, BlitzPage, useMutation } from "blitz"
 import getMemo from "app/memos/queries/getMemo"
 import deleteMemo from "app/memos/mutations/deleteMemo"
+import MemoContainer from "../../components/MemoContainer"
 
 export const Memo = () => {
   const router = useRouter()
@@ -36,7 +37,7 @@ export const Memo = () => {
 
 const ShowMemoPage: BlitzPage = () => {
   return (
-    <div>
+    <MemoContainer>
       <p>
         <Link href="/memos">
           <a>Memos</a>
@@ -46,7 +47,7 @@ const ShowMemoPage: BlitzPage = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Memo />
       </Suspense>
-    </div>
+    </MemoContainer>
   )
 }
 

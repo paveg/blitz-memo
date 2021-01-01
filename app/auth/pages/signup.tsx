@@ -10,7 +10,7 @@ const SignupPage: BlitzPage = () => {
   return (
     <LoginContainer>
       <h1 className="text-center text-4xl mt-8 mb-16">Memo Application</h1>
-      <SignupForm onSuccess={() => router.push("/")} />
+      <SignupForm onSuccess={() => router.push("/memos")} />
     </LoginContainer>
   )
 }

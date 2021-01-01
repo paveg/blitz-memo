@@ -10,7 +10,7 @@ const LoginPage: BlitzPage = () => {
   return (
     <LoginContainer>
       <h1 className="text-center text-4xl mt-8 mb-16">Memo Application</h1>
-      <LoginForm onSuccess={() => router.push("/")} />
+      <LoginForm onSuccess={() => router.push("/memos")} />
     </LoginContainer>
   )
 }

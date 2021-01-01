@@ -3,6 +3,7 @@ import Layout from "app/layouts/Layout"
 import { Link, usePaginatedQuery, useRouter, BlitzPage } from "blitz"
 import getMemos from "app/memos/queries/getMemos"
 import { useCurrentUser } from "../../../hooks/useCurrentUser"
+import MemoContainer from "../../components/MemoContainer"
 
 const ITEMS_PER_PAGE = 100
 
@@ -44,7 +45,7 @@ export const MemosList = () => {
 
 const MemosPage: BlitzPage = () => {
   return (
-    <div>
+    <MemoContainer>
       <p>
         <Link href="/memos/new">
           <a>Create Memo</a>
@@ -54,7 +55,7 @@ const MemosPage: BlitzPage = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <MemosList />
       </Suspense>
-    </div>
+    </MemoContainer>
   )
 }
 

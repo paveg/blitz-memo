@@ -4,6 +4,7 @@ import createMemo from "app/memos/mutations/createMemo"
 import MemoForm from "app/memos/components/MemoForm"
 import { useCurrentUser } from "../../../hooks/useCurrentUser"
 import { useState } from "react"
+import MemoContainer from "../../components/MemoContainer"
 
 const NewMemoPage: BlitzPage = () => {
   const router = useRouter()
@@ -13,7 +14,7 @@ const NewMemoPage: BlitzPage = () => {
   const [body, setBody] = useState<string>("")
 
   return (
-    <div>
+    <MemoContainer>
       <h1>Create New Memo</h1>
 
       <MemoForm
@@ -44,7 +45,7 @@ const NewMemoPage: BlitzPage = () => {
           <a>Memos</a>
         </Link>
       </p>
-    </div>
+    </MemoContainer>
   )
 }
 
