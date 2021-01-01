@@ -12,6 +12,4 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: blitz-memo
     volumes:
-      - dbdata:/var/lib/postgresql/data
-volumes:
-  dbdata:
+      - ./dataDir:/var/lib/postgresql/data

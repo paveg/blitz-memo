@@ -4,6 +4,7 @@ import { LabeledTextField } from "app/components/LabeledTextField"
 import { Form, FORM_ERROR } from "app/components/Form"
 import login from "app/auth/mutations/login"
 import { LoginInput } from "app/auth/validations"
+import LoginContainer from "./LoginContainer"
 
 type LoginFormProps = {
   onSuccess?: () => void
@@ -14,7 +15,9 @@ export const LoginForm = (props: LoginFormProps) => {
 
   return (
     <div>
-      <h1>Login</h1>
+      <h2 className="mt-6 mb-2 text-center text-3xl font-extrabold text-gray-900">
+        Log in to your account
+      </h2>
 
       <Form
         submitText="Login"
@@ -36,12 +39,16 @@ export const LoginForm = (props: LoginFormProps) => {
           }
         }}
       >
-        <LabeledTextField name="email" label="Email" placeholder="Email" />
-        <LabeledTextField name="password" label="Password" placeholder="Password" type="password" />
+        <div className="flex justify-evenly">
+          <LabeledTextField name="email" label="" placeholder="Email" />
+          <LabeledTextField name="password" label="" placeholder="Password" type="password" />
+        </div>
       </Form>
-
-      <div style={{ marginTop: "1rem" }}>
-        Or <Link href="/signup">Sign Up</Link>
+      <div className="text-center mt-2 text-gray-500 items-center">
+        Or{" "}
+        <u>
+          <Link href="/signup">Create New Account</Link>
+        </u>
       </div>
     </div>
   )
